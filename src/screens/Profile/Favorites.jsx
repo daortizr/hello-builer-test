@@ -6,7 +6,7 @@ const userName = localStorage.getItem("gitHubUserName");
 const GET_REPOSITORIES = gql`
 query {
   user(login:"${userName}") {
-      pinnedItems(first: 5, types: [REPOSITORY, GIST]) {
+      pinnedItems(first: 10, types: [REPOSITORY, GIST]) {
           totalCount
           edges {
               node {
@@ -29,7 +29,6 @@ query {
           console.error('Error', error);
           return <div>Error!</div>;
       }
-      console.log('favorites', data)
       return (
         <div>
           <h2>Favorites</h2>

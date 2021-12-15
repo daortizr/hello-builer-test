@@ -21,7 +21,6 @@ const Profile = () => {
     const authToken = localStorage.getItem("userToken");
     const [client] = useState(createApolloClient(authToken));
     const authLogin = (localStorage.getItem('authenticated') === undefined || localStorage.getItem('authenticated') === false || localStorage.getItem('authenticated') === null) ? false : true;
-    console.log('authLogin', authLogin, localStorage.getItem('authenticated'))
     const history = useNavigate();
     const auth = getAuth();
     const handleSignOut = () => {

@@ -28,14 +28,13 @@ const GET_REPOSITORIES = gql`
           console.error('Error', error);
           return <div>Error!</div>;
       }
-      console.log('data 1', data)
       return (
           <div>
               <h2>Respositories List</h2>
               <ul>
                   {data.search.repos.map((repo, index) => {
                       return (
-                          <li><a key={`link_${index}`} href={repo.repo.url} target="_blank">
+                          <li key={`list_repo_${index}`}><a key={`link_repo_${index}`} href={repo.repo.url} target="_blank">
                               {repo.repo.name}
                           </a></li>)
                   })}
