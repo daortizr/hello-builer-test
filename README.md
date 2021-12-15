@@ -5,7 +5,7 @@ Run in your local terminal "git clone https://github.com/daortizr/hello-builer-t
 
 Once you have cloned the repo move to the project folder using "cd hello-build-test".
 
-Instan dependencies "npm install".
+Install dependencies "npm install".
 
 Start the react project on your local machine using "npm start".
 
